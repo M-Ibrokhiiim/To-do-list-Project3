@@ -1,0 +1,149 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(61, 16, 103);
+}
+
+.main-container{
+    background-color:  white;
+    width: 420px;
+    height: 500px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 15px;
+    position: relative;
+    margin-top: 60px;
+}
+
+.main-container-child-container{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 10px;
+}
+
+ 
+
+.add-section-title{
+    text-align: left;
+    margin-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    color: rgb(8, 8, 85);
+    font-size: 22px;
+    font-weight: 780;
+    margin-top: 5px;
+}
+
+.add-section-title>img{
+    width: 22px;
+    height: 25px;
+    margin-left: -2px;
+    margin-top: 4px;
+}
+ 
+
+.add-section-input{
+    width: 310px;
+    height: 48px;
+    padding-left: 30px;
+    display:inline;
+    border-radius: 100px;
+    border: none;
+    background-color:rgb(231, 237, 243);
+    font-family: sans-serif;
+    font-size: 13px;
+    color: rgb(12, 12, 92);
+
+}
+
+.add-section-input:focus{
+    outline: none;
+    border: none;
+}
+
+.add-section-btn{
+    display: inline;
+    width: 110px;
+    height: 50px;
+    border-radius: 30px;
+    margin-left: -80px;
+    color: white;
+    background-color: rgb(255, 55, 55);
+    border: none;
+    font-family: sans-serif;
+    font-size: 15px;
+
+}
+.add-section-btn:hover{
+     background-color: rgb(215, 16, 16);;
+}
+
+.add-section-btn:active{
+    background-color: rgb(255, 55, 55);
+    transform:translate(-1px,-1px);
+    transition: all;
+    transition-delay: 0.1s;
+    transition-duration: 0.1s;
+}
+
+
+
+.list-of-items{
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: scroll;
+    height: 300px;
+ 
+}
+ 
+
+.list-of-items >div {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.list-of-items-input{
+    width: 40px;
+    height: 23px;
+    border: 2px solid aliceblue;
+    border-radius: 100px;
+}
+
+.list-of-items >div>div{
+    display: flex;
+    align-items: center;
+}
+
+.list-of-items-label{
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-left: -2px;
+    color:  rgb(12, 12, 92);
+}
+
+.list-of-items-btn{
+    border: none;
+    background-color: white;
+    color:  rgb(12, 12, 92);
+    font-size: 18px;
+    border-radius: 5px;
+}
+.list-of-items-btn:hover{
+  color: blue;
+  background-color:  rgb(193, 208, 221)
+}
+.list-of-items-btn:active{
+    color:rgb(12, 12, 92);
+    /* background-color: rgb(251, 164, 164); */
+}
+
+.list-of-items-main-container{
+    margin-bottom: 5px;
+}
