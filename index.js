@@ -5,15 +5,17 @@ const list=[]
 function valueTaking(){
   
 
-  let valueOfInput=document.getElementById('add-section-inputId').value.trim()
+  let input=document.getElementById('add-section-inputId')
+  let valueOfInput=input.value.trim()
 
+  
   if(valueOfInput===""){
-    alert('Please fill out!!!')
+    alert("Please fill input!!!")
     return
   }
+  
   if(list.includes(valueOfInput)){
-    alert('Item exist!!!')
-    return
+   alert('This item already exist...')      
   } 
   
   list.push(valueOfInput)
@@ -31,6 +33,6 @@ function valueTaking(){
     
     const appealToUI=document.getElementById('list-of-items1')
     appealToUI.innerHTML=UIitaration
-    valueOfInput=""
+    input.value=""
 }
 
