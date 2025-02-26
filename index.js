@@ -24,12 +24,12 @@ function valueTaking(){
   let UIitaration=''
   list.forEach(item=>{
       UIitaration +=`
-            <div class="list-of-items-main-container" id="list-of-items-main-containerId">
+            <div class="list-of-items-main-container">
                 <div>
-                 <input type="checkbox" name="radio-of-list" id="radio-of-list" class="list-of-items-input" id="list-of-items-inputId" >
+                 <input type="checkbox" name="radio-of-list" id="radio-of-list" for="to-do" class="list-of-items-input">
                  <label for="item" class="list-of-items-label" data-list-item="${item}">${item}</label>
                 </div>
-                <button class="list-of-items-btn" id="list-of-items-btnId" onclick="deletingItem()">x</button>
+                <button class="list-of-items-btn" >x</button>
             </div>
       `})  
     
@@ -45,25 +45,16 @@ function valueTaking(){
 
 
 
- 
-const deleteableContent=document.querySelectorAll(".list-of-items-label")
-const checkboxInput=document.querySelectorAll(".list-of-items-input")
-console.log(checkboxInput);
 
 
-function deletingItem(){
- console.log("Checked!!!");
 
- deleteableContent.forEach(content=>{
- 
-  const item=content.innerHTML.trim()
- 
-  const indexOfItem=list.indexOf(item)
-  console.log(indexOfItem);
-  
-  // if(indexOfItem !==-1){
-  //   list.splice(item)
-  // }
- })
 
-}
+
+const element=document.querySelectorAll('.list-of-items-btn')
+
+const allButtons=element.forEach(button=>{
+  button.addEventListener('click',()=>{
+    console.log("Pressed");
+    
+  })
+})
