@@ -26,8 +26,8 @@ function valueTaking(){
       UIitaration +=`
             <div class="list-of-items-main-container" id="list-of-items-main-containerId">
                 <div>
-                 <input type="checkbox" name="radio-of-list" id="radio-of-list" class="list-of-items-input" id="list-of-items-inputId">
-                 <label for="item" class="list-of-items-label">${item}</label>
+                 <input type="checkbox" name="radio-of-list" id="radio-of-list" class="list-of-items-input" id="list-of-items-inputId" >
+                 <label for="item" class="list-of-items-label" data-list-item="${item}">${item}</label>
                 </div>
                 <button class="list-of-items-btn" id="list-of-items-btnId" onclick="deletingItem()">x</button>
             </div>
@@ -47,10 +47,23 @@ function valueTaking(){
 
  
 const deleteableContent=document.querySelectorAll(".list-of-items-label")
+const checkboxInput=document.querySelectorAll(".list-of-items-input")
+console.log(checkboxInput);
 
 
 function deletingItem(){
-  console.log(deleteableContent);
+ console.log("Checked!!!");
+
+ deleteableContent.forEach(content=>{
  
+  const item=content.innerHTML.trim()
+ 
+  const indexOfItem=list.indexOf(item)
+  console.log(indexOfItem);
   
+  // if(indexOfItem !==-1){
+  //   list.splice(item)
+  // }
+ })
+
 }

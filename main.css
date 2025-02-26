@@ -179,3 +179,13 @@ body{
     }
 }
 
+
+
+input[type="checkbox"]:checked+label{
+    color: red;
+    text-decoration: line-through;
+}
+
+.list-of-items-btn label:active{ 
+    display: none;
+}
