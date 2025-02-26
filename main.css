@@ -67,7 +67,7 @@ body{
 .add-section-btn{
     display: inline;
     width: 110px;
-    height: 50px;
+    height: 54px;
     border-radius: 30px;
     margin-left: -80px;
     color: white;
@@ -94,7 +94,7 @@ body{
 .list-of-items{
     width: 350px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 35px;
     overflow: scroll;
     height: 300px;
  
@@ -147,3 +147,35 @@ body{
 .list-of-items-main-container{
     margin-bottom: 5px;
 }
+
+
+
+.inputAnimation{
+    animation-name: animaForInput;
+    animation-duration: 0.4s;
+    animation-delay: 0.011s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    background-color: brown;
+    border-radius: 110px;
+    width: 382px;
+    height: 54px;
+    box-shadow: 1px 1px 20px red; 
+    margin-left: 15px;
+}
+
+@keyframes  animaForInput{
+    0%{
+        transform: translateX(2px);
+    }
+    50%{
+        transform: translateX(-2px);
+    }
+    80%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+

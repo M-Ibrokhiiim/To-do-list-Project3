@@ -10,13 +10,15 @@ function valueTaking(){
 
   
   if(valueOfInput===""){
-    alert("Please fill input!!!")
+    const appealToInput=document.getElementById("inputContainer")
+    appealToInput.classList.add("inputAnimation")
     return
   }
   
   if(list.includes(valueOfInput)){
-   alert('This item already exist...')      
-  } 
+   alert('This item already exist...')   
+   return
+   } 
   
   list.push(valueOfInput)
   let UIitaration=''
@@ -25,14 +27,30 @@ function valueTaking(){
             <div class="list-of-items-main-container" id="list-of-items-main-containerId">
                 <div>
                  <input type="checkbox" name="radio-of-list" id="radio-of-list" class="list-of-items-input" id="list-of-items-inputId">
-                 <label for="item" class="list-of-items-label" id="list-of-items-labelId">${item}</label>
+                 <label for="item" class="list-of-items-label">${item}</label>
                 </div>
-                <button class="list-of-items-btn" id="list-of-items-btnId">x</button>
+                <button class="list-of-items-btn" id="list-of-items-btnId" onclick="deletingItem()">x</button>
             </div>
       `})  
     
     const appealToUI=document.getElementById('list-of-items1')
     appealToUI.innerHTML=UIitaration
     input.value=""
+
+
+    const appealToInput=document.getElementById("inputContainer")
+    appealToInput.classList.remove("inputAnimation")
+
 }
 
+
+
+ 
+const deleteableContent=document.querySelectorAll(".list-of-items-label")
+
+
+function deletingItem(){
+  console.log(deleteableContent);
+ 
+  
+}
