@@ -1,7 +1,9 @@
-// DOM
+// Elements collector array
 
 const list=[]
 
+
+// Function for show items on list section
 function valueTaking(){
   
 
@@ -44,7 +46,7 @@ function valueTaking(){
 }
 
 
-
+// Deleting list of items
 const appealToParentElement=document.getElementById('list-of-items1')
 
 appealToParentElement.addEventListener('click',(event)=>{
@@ -64,3 +66,4 @@ appealToParentElement.addEventListener('click',(event)=>{
    }
   
 })
+
