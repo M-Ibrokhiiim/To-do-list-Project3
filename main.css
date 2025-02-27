@@ -95,9 +95,10 @@ body{
     width: 350px;
     margin: 0 auto;
     margin-top: 35px;
-    overflow: scroll;
+  
     height: 300px;
- 
+    
+    
 }
  
 
@@ -188,5 +189,8 @@ input[type="checkbox"]:checked+label{
     color: red;
     text-decoration: line-through;
 }
+
+
+
 
  
