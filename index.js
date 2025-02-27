@@ -24,12 +24,12 @@ function valueTaking(){
   let UIitaration=''
   list.forEach(item=>{
       UIitaration +=`
-            <div class="list-of-items-main-container">
+            <div class="list-of-items-main-container"  >
                 <div>
-                 <input type="checkbox" name="radio-of-list" id="radio-of-list" for="to-do" class="list-of-items-input">
-                 <label for="item" class="list-of-items-label" data-list-item="${item}">${item}</label>
+                   <input type="checkbox" name="radio-of-list" id="radio-of-list" for="to-do" class="list-of-items-input">
+                   <label for="item" class="list-of-items-label" data-list-item="${item}">${item}</label>
                 </div>
-                <button class="list-of-items-btn" >x</button>
+                <button class="list-of-items-btn">x</button>
             </div>
       `})  
     
@@ -45,16 +45,22 @@ function valueTaking(){
 
 
 
+const appealToParentElement=document.getElementById('list-of-items1')
 
+appealToParentElement.addEventListener('click',(event)=>{
 
+   if(event.target.classList.contains('list-of-items-btn')){
+    const labelContainer=event.target.parentElement
+    const labelText=labelContainer.querySelector('.list-of-items-label').textContent
+  
 
-
-
-const element=document.querySelectorAll('.list-of-items-btn')
-
-const allButtons=element.forEach(button=>{
-  button.addEventListener('click',()=>{
-    console.log("Pressed");
+    const findIndex=list.indexOf(labelText)
+    if(findIndex !== -1){
+      list.splice(findIndex,1)
+     }
     
-  })
+     labelContainer.remove()
+
+   }
+  
 })
