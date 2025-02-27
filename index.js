@@ -22,7 +22,12 @@ function valueTaking(){
        
       if(content.textContent===valueOfInput){
         content.style.backgroundColor="Red"
-
+        
+        setTimeout((()=>{
+          content.style.backgroundColor=""
+          
+          input.value=""
+        }),1000)
 
         return
       }
