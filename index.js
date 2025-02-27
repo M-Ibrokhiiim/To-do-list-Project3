@@ -18,8 +18,18 @@ function valueTaking(){
   }
   
   if(list.includes(valueOfInput)){
-   alert('This item already exist...')   
-   return
+    document.querySelectorAll('.list-of-items-label').forEach(content=>{
+       
+      if(content.textContent===valueOfInput){
+        content.style.backgroundColor="Red"
+
+
+        return
+      }
+
+    })
+    
+      return
    } 
   
   list.push(valueOfInput)
@@ -29,7 +39,7 @@ function valueTaking(){
             <div class="list-of-items-main-container"  >
                 <div>
                    <input type="checkbox" name="radio-of-list" id="radio-of-list" for="to-do" class="list-of-items-input">
-                   <label for="item" class="list-of-items-label" data-list-item="${item}">${item}</label>
+                   <label for="item" class="list-of-items-label">${item}</label>
                 </div>
                 <button class="list-of-items-btn">x</button>
             </div>

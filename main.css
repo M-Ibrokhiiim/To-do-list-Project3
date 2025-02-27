@@ -189,6 +189,4 @@ input[type="checkbox"]:checked+label{
     text-decoration: line-through;
 }
 
-.list-of-items-btn label:active{ 
-    display: none;
-}
+ 
